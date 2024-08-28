@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page(importance of web Development)</title>
+    <title>importance of web development</title>
+    <style>
+    html{
+    scroll-behavior: smooth;
+    }
+
+    body, ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav {
+        background-color: #b66878;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        height: 35px;
+        z-index: 4;
+    }
+
+
+    nav ul{
+        display: flex;
+        justify-content: right;
+
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        color: #faa;
+        text-decoration: none;
+        font-size: 25px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;      
+    }
+    nav ul li a:hover{
+        background-color: #c98895;
+        border-radius: 4px;
+    }
+
+    /* hero section */
+
+    .hero{
+        background-image: url('bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #EAEAEA;
+        text-align: center;
+        padding: 0 20px;
+        z-index: 1;
+
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); 
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+    }
+
+    .hero-content{
+        max-width: 800px;
+        z-index: 3;
+    }
+
+    .hero h1{
+        font-size: 90px;
+        margin-bottom: 20px;
+        z-index: 3;
+    
+    }
+    .hero h1{
+        opacity: 0;
+        animation: huhu 1s ease-in forwards;
+    }
+
+    @keyframes huhu {
+        to {
+            opacity: 1; 
+        }
+    }
+
+
+    .hero p {
+        font-size: 30px;
+        margin-bottom: 30px;
+        z-index: 3;
+    }
+
+    .hero p {
+        opacity: 0;
+        animation: meow 3s ease-in forwards;
+    }
+
+
+
+    .btn {
+        background-color: #b66878;
+        color: rgb(244, 235, 235);
+        padding: 15px 20px;
+        text-decoration: none;
+        font-size: 30px;
+        border-radius: 5px;
+        transition: background-color 0.3 ease;
+        z-index: 3;
+        margin-top: 10px;
+
+    }
+    .btn:hover {
+        background-color: #c98895;
+    }
+
+    /* about section */
+    .about {
+        background-color: #c98895;
+        padding: 60px 100px;
+        color: #ffffff;
+        height: auto;
+        
+    }
+
+    .about .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+
+    .about h1{
+        font-size: 44px;
+        margin-bottom: 30px;
+        color: #EAEAEA;
+        justify-content: center;
+    }
+
+    .text-title {
+    color: #f3e2e2;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    }
+
+    .small-desc {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #e5c0de;
+    }
+
+    .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #c48bb0, #e283b2);
+    border-radius: 0 4px 0 32px;
+    }
+
+    .go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans-serif;
+    }
+
+    .text {
+    display: block;
+    position: relative;
+    max-width: 300px;
+    max-height: 320px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 2em 1.2em;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #b66878, #b66878);
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .text:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, #c98895, #c98895);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out;
+    }
+
+    .text:hover:before {
+    transform: scale(28);
+    }
+
+    .text:hover .small-desc {
+    transition: all 0.5s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+    }
+
+    .text:hover .text-title {
+    transition: all 0.5s ease-out;
+    color: #ffffff;
+    }
+
+    .text-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; 
+    }
+
+    .text-row .text {
+    width: 100%; 
+    max-width: 600px; 
+    position: relative;
+    }
+
+
+    /* footer */
+
+    footer{
+        background-color:  #b66878;
+        color: white;
+        font: 60%;
+        padding: 40px 20px;
+        text-align: center;
+        bottom: 0;
+        
+    }
+    .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+    .social-links a {
+            color: #f38681;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #f0afaf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            transition: background-color 0.3s;
+        }
+    .social-links a:hover {
+            background-color: rgb(213, 114, 114);
+        }
+    .social-links i {
+            font-size: 20px;
+        }
+
+    footer .container{
+        height: 80%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    </style>
+    
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            
+        </ul>
+        
+
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+
+            <h1 class="hero1">Web Development</h1>
+            <p>THE IMPORTANCE OF WEB DEVELOPMENT </p>
+            <a href="#about" class="btn">Get Started</a>
+            <a href="#about" class ="btn">Learn More</a>
+        </div>
+        
+
+    </section>
+
+    
+    <section class="about" id="about">
+        <h1>IMPORTANCE OF WEB DEVELOPMENT</h1>
+        <div class="text-grid">
+            <div class="text-row">
+                <div class="text">
+                    <p class="text-title">IMPACT on SOCIETY</p>
+                    <p class="small-desc">
+                        Web development has made information widely accessible, transcending geographical barriers and promoting inclusivity. It has empowered social media as a platform for expression and activism, and revolutionized education with e-learning opportunities available to students globally.
+                    </p>
+                </div>
+                <div class="text">
+                    <p class="text-title">IMPACT on BUSINESS</p>
+                    <p class="small-desc">
+                      Web development drives innovation and customization, as companies seek tailored solutions to enhance user experience and achieve competitive advantage. This leads to rapid advancements in technology and design trends, shaping the industry to meet evolving market demands.
+                    </p>
+                </div>
+            </div>
+            <div class="text-row">
+                <div class="text">
+                    <p class="text-title">IMPACT on EDUCATION and LEARNING</p>
+                    <p class="small-desc">
+                        Web development enhances education by creating online platforms that offer courses, resources, and interactive tools accessible from anywhere. It supports diverse learning styles through features like video tutorials, quizzes, and accessibility options, ensuring inclusive education for all.
+                    </p>
+                </div>
+                <div class="text">
+                    <p class="text-title">IMPACT on TECHNOLOGY ADVANCEMENTS</p>
+                    <p class="small-desc">
+                        Web development accelerates technology advancement by driving innovation and integrating emerging technologies like AI and AR into web applications. It also enhances performance, security, and cross-platform compatibility while contributing to the evolution of web standards and cloud computing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        
+    <footer id="footer">
+        <div class="containter" >
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100083605077346&sk=about" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/rn_hrndz/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/ynaaaxd" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://github.com/rinahernandez" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            <p>2024 RinaWebDev. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            const hiddenElements = document.querySelectorAll('.hidden-text');
+
+            const oberserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry =>{
+            if (entry.isIntersecting){
+                entry.target.classList.add('show');
+                oberserver.unobserve(entry.target);
+            }
+                });
+            }, {threshold: 0.1});
+                hiddenElements.forEach((el) => oberserver.observe(el));
+                });
+    </script>
+</body>
+</html>
